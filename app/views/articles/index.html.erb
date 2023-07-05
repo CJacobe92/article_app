@@ -1,3 +1,4 @@
+
 <%= render partial: "shared/title_articles"%>
 <div class="h-[84vh]">
     <div class="overflow-y-auto bg-gray-200 h-[84vh] max-h-[84vh] px-12 ">
@@ -6,8 +7,12 @@
             <p class="mx-2 my-4 text-xs"><b>Published:</b> <%=article[:updated_at].strftime("%m/%y %H:%M:%S %p")%></p>
             <h1 class="mx-2 my-4 text-2xl font-semibold text-teal-700 hover:underline"><%= link_to article[:title], article_show_path(article[:id])%></h1>
             <div class= "flex flex-row items-center m-1">
-               <img class="border border-black border-opacity-30 rounded-sm"src="<%= article[:image] %>" style="object-fit: cover; width: 8rem; height: 8rem;" />
-                <p class="mx-2 text-sm"><%=truncate(article[:body], length: 1000)%></p>
+               <img class="border border-black rounded-sm border-opacity-30"src="<%= article[:image] %>" style="object-fit: cover; width: 8rem; height: 8rem;" />
+
+                <div class="mx-4">
+                    <%= raw(truncate_html(article[:body], length: 500)) %>
+                </div>
+
             </div>
         </div>
         <% end %>

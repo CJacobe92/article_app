@@ -4,7 +4,10 @@
         <h1 class="font-extrabold text-left mx-28 mt-14 text-8xl"><%=@article[:title]%></h1>
         <div class="flex flex-row m-24">
             <img class="object-contain object-center mx-10 border border-black w-72 h-72 border-opacity-30" src="<%= @article[:image]%>"/>
-            <p style="white-space: pre-line; "><%=@article[:body]%></p>
+                <div class="flex flex-col" style="white-space: pre-line;">
+                   <%= raw @article.body %>
+                </div>
+
         </div>
     </div>
 </div>
