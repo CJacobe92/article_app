@@ -1,0 +1,9 @@
+<div class="h-[86vh] overflow-y-scroll flex flex-col items-center px-40 bg-gray-200 hidden" id= 'preview_form'>
+    <div class="bg-white shadow-md shadow-gray-500">
+        <h1 class="font-extrabold text-left mx-28 mt-14 text-8xl"><%=@article[:title]%></h1>
+        <div class="flex flex-row m-24">
+            <img class="object-contain object-center mx-10 border border-black w-72 h-72 border-opacity-30" src="<%= @article[:image]%>"/>
+            <p style="white-space: pre-line; "><%=@article[:body]%></p>
+        </div>
+    </div>
+</div>

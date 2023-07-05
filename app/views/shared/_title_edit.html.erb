@@ -1,0 +1,10 @@
+<div class="h-[2vh] bg-gray-900 text-white flex items-center p-4 text-sm border-t border-teal-500 justify-between">
+    <p><b>Published:</b> <%=@article[:updated_at].strftime("%m/%y %H:%M:%S %p")%></p>
+    <div class="flex flex-row items-center">
+        <p class="mx-4">Editing</p>
+        <button class="px-6 font-bold text-teal-500 border-l border-r border-white" id="publishBtn">
+            Publish
+        </button>
+        <%=button_to 'DELETE', article_destroy_path(@article[:id]), method: :delete, class: "bg-red-700 px-4 mx-4 rounded-sm font-bold" %>
+    </div>
+</div>
