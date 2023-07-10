@@ -11,7 +11,6 @@
         },
         theme: 'snow'
         // paste: true,
-        // theme: 'snow',
         // clipboard: {
         // matchVisual: false,
         // // Set pastePlain to true to preserve block format
